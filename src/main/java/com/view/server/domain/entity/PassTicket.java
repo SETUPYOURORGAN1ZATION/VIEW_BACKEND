@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @Component
 
-public class Student {
+public class PassTicket {
   @Id
   //@GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(nullable = false)
-  private long studentId;
+  private long id;
 
   @Column(nullable = false)
   private long grade;

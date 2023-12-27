@@ -1,5 +1,6 @@
 package com.view.server.domain.entity;
 
+import com.view.server.domain.entity.enums.RegisterType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,25 +13,18 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 @Component
 
-public class Student {
+public class Register {
   @Id
   //@GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(nullable = false)
-  private long studentId;
+  private long studentNumber;
 
   @Column(nullable = false)
-  private long grade;
+  private String checkedDate;
 
   @Column(nullable = false)
-  private long classNum;
+  private RegisterType status;
 
-  @Column(nullable = false)
-  private long studentNum;
-
-  @Column(nullable = false)
-  private String name;
-
-  @Column(nullable = false)
-  private String password;
-
+  @Column(nullable = true)
+  private String description;
 }
